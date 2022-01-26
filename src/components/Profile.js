@@ -20,9 +20,10 @@ function Profile({ navigation }) {
   } else {
     styles = stylesWeb;
   }
+
   return (
-    <View style={styles.ProfileLayout}>
-      <Nav navigation={navigation} />
+    <View style={styles.ProfileLayout} navigation={navigation}>
+        <Nav navigation={navigation} />
       <View style={styles.column}>
         <Image
           source={require("../images/Sam.jpg")}

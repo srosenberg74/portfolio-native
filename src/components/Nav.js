@@ -42,7 +42,7 @@ function Nav({ navigation }) {
           >
             Career
           </Text>
-
+{/* 
           <Text
             navigation={navigation}
             style={styles.headerText}
@@ -68,7 +68,7 @@ function Nav({ navigation }) {
             onPress={() => navigation.navigate("Contact")}
           >
             Contact
-          </Text>
+          </Text> */}
         </View>
       </TouchableHighlight>
     </View>

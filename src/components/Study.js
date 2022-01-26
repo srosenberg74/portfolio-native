@@ -19,9 +19,9 @@ function Study({ navigation }) {
   } else {
     styles = stylesWeb;
   }
+
   return (
     <View style={styles.layout}>
-      
       <Nav navigation={navigation} />
       <View style={styles.content}>
       <Text style={styles.heading}>Areas of Study</Text>
