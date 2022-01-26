@@ -1,70 +1,142 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { View, StyleSheet, Text, TouchableHighlight } from "react-native";
 
-function Nav() {
-  const style1 = {
-    backgroundColor: "#082c45",
-    fontFamily: "licorice",
-  };
+function Nav({ navigation }) {
   return (
-    <div>
-      <nav
-        className="navbar navbar-expand-lg navbar-dark fixed-top px-3"
-        style={{ fontFamily: "monospace", backgroundColor: "#082c45" }}
+    <View style={styles.Header} navigation={navigation}>
+      <TouchableHighlight
+        navigation={navigation}
+        onPress={navigation.navigate("Profile")}
       >
-        <div className="container-fluid">
-          <Link className="navbar-brand fs-2 nav-item" to={"/"} style={style1}>
-            Sam Rosenberg
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+        <View style={styles.HeaderWrap} navigation={navigation}>
+          <View>
+            <Text style={styles.HeaderTitle}>Sam Rosenberg</Text>
+          </View>
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight>
+        <View style={styles.HeaderBar} navigation={navigation}>
+          <Text
+            navigation={navigation}
+            style={styles.headerText}
+            name="Profile"
+            onPress={() => navigation.navigate("Profile")}
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link" onClick={ ()=>window.scrollTo(0, 0)} aria-current="page" to={"/profile"}>
-                  Profile
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" onClick={ ()=>window.scrollTo(0, 0)} to={"/study"}>
-                  Areas of Study
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" onClick={ ()=>window.scrollTo(0, 0)} to={"/career"}>
-                  Career Development
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" onClick={ ()=>window.scrollTo(0, 0)} to={"/education"}>
-                  Education
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" onClick={ ()=>window.scrollTo(0, 0)} to={"/portfolio"}>
-                  Portfolio
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" onClick={ ()=>window.scrollTo(0, 0)} to={"/contact"}>
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+            Profile
+          </Text>
+
+          <Text
+            navigation={navigation}
+            style={styles.headerText}
+            name="Study"
+            onPress={() => navigation.navigate("Study")}
+          >
+            Study
+          </Text>
+
+          <Text
+            navigation={navigation}
+            style={styles.headerText}
+            name="Career"
+            onPress={() => navigation.navigate("Career")}
+          >
+            Career
+          </Text>
+
+          <Text
+            navigation={navigation}
+            style={styles.headerText}
+            name="Education"
+            onPress={() => navigation.navigate("Education")}
+          >
+            Education
+          </Text>
+
+          <Text
+            navigation={navigation}
+            style={styles.headerText}
+            name="Portfolio"
+            onPress={() => navigation.navigate("Portfolio")}
+          >
+            Portfolio
+          </Text>
+
+          <Text
+            style={styles.headerText}
+            navigation={navigation}
+            name="Contact"
+            onPress={() => navigation.navigate("Contact")}
+          >
+            Contact
+          </Text>
+        </View>
+      </TouchableHighlight>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  Header: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "#082c45",
+    // height: 100,
+    // width: "100%",
+    paddingBottom: 20,
+    zIndex: -2,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    color: "white",
+  },
+  HeaderTitle: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    // padding: 30,
+  
+   fontSize: 25,
+   color: "white",
+  },
+  HeaderBar: {
+    flexDirection: "row",
+    backgroundColor: "#082c45",
+    width: "100%",
+    padding: 5,
+    justifyContent: "space-around",
+    marginBottom: 0,
+  },
+  headerText: {
+    color: "white",
+    fontWeight: "bold",
+    alignItems: "center",
+    fontSize: 18,
+    padding: 8,
+  },
+  // HeaderSearch: {
+  // 	marginVertical: 30,
+
+  HeaderWrap: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "flex-end",
+    width: "100%",
+    paddingTop: 10,
+    paddingBottom: 20,
+  },
+  bodyText: {
+    color: "#efd595",
+  },
+  profileImage: {
+    height: "10%",
+    width: "10%",
+    borderRadius: 5,
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+  },
+});
 
 export default Nav;

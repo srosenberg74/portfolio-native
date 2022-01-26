@@ -2,6 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Profile from "./src/components/Profile";
+import Nav from "./src/components/Nav";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +17,11 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen
+            name="Profile"
+            component={Profile}
+            options={{ title: "Profile" }}
+          />
           {/* <Stack.Screen name="Study" component={Study} /> 
 					<Stack.Screen name="Career" component={Career} />
 					<Stack.Screen name="Education" component={Education} />
@@ -29,10 +35,5 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+  container: {},
 });
