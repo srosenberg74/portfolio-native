@@ -1,58 +1,50 @@
 import React from "react";
+import { stylesMobile, stylesWeb } from "./Styles";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  useWindowDimensions,
+} from "react-native";
+import Nav from "../components/Nav";
 
-function Study() {
+function Study({ navigation }) {
+  const { width } = useWindowDimensions();
+  const widthBreakpoint = 1050;
+
+  let styles;
+  if (width < widthBreakpoint) {
+    styles = stylesMobile;
+  } else {
+    styles = stylesWeb;
+  }
   return (
-    <div className="content">
-      <h2
-        className="my-3 fs-1"
-        style={{ color: "#082c45a8", fontFamily: "PT Serif" }}
-      >
-        Areas of Study
-      </h2>
-      <p
-        className="fs-5 fw-bold"
-        style={{ lineHeight: "1.4", color: "#082c45d7", fontFamily: "Raleway" }}
-      >
-        <strong className="fw-bolder fs-5" style={{ color: "#082c45" }}>
-          Web Development -
-        </strong>
-        <br />
+    <View style={styles.layout}>
+      
+      <Nav navigation={navigation} />
+      <View style={styles.content}>
+      <Text style={styles.heading}>Areas of Study</Text>
+      <Text style={styles.body}>
+        <Text style={styles.subheading}>Web Development -</Text>
         React, React-Native, JavaScript, HTML, CSS, Bootstrap
-      </p>
-      <hr />
-      <p
-        className="fs-5 fw-bold"
-        style={{ lineHeight: "1.4", color: "#082c45d7", fontFamily: "Raleway" }}
-      >
-        <strong className="fw-bolder fs-5" style={{ color: "#082c45" }}>
-          Design -
-        </strong>
-        <br />
+      </Text>
+      <Text style={styles.body}>
+        <Text style={styles.subheading}>Design -</Text>
         Photoshop, Figma, Blender, Lunacy, Clip Studio Paint
-      </p>
-      <hr />
-      <p
-        className="fs-5 fw-bold"
-        style={{ lineHeight: "1.4", color: "#082c45d7", fontFamily: "Raleway" }}
-      >
-        <strong className="fw-bolder fs-5" style={{ color: "#082c45" }}>
-          Additional Software Experience -
-        </strong>
-        <br />
+      </Text>
+      <Text style={styles.body}>
+        <Text style={styles.subheading}>Additional Software Experience -</Text>
         Unreal Engine, Unity, Ableton Live, Adobe Audition
-      </p>
-      <hr />
-      <p
-        className="fs-5 fw-bold mb-4"
-        style={{ lineHeight: "1.4", color: "#082c45d7", fontFamily: "Raleway" }}
-      >
-        <strong className="fw-bolder fs-5" style={{ color: "#082c45" }}>
+      </Text>
+      <Text style={styles.body}>
+        <Text style={styles.subheading}>
           Additional Programming Languages Studied -
-        </strong>
-        <br />
+        </Text>
         C++, Python, C#
-      </p>
-    </div>
+      </Text>
+      </View>
+    </View>
   );
 }
 

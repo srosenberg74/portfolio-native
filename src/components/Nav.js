@@ -8,7 +8,7 @@ function Nav({ navigation }) {
         navigation={navigation}
         onPress={navigation.navigate("Profile")}
       >
-        <View style={styles.HeaderWrap} navigation={navigation}>
+        <View navigation={navigation}>
           <View>
             <Text style={styles.HeaderTitle}>Sam Rosenberg</Text>
           </View>
@@ -80,25 +80,18 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-around",
+    alignItems: "center",
     backgroundColor: "#082c45",
-    // height: 100,
-    // width: "100%",
-    paddingBottom: 20,
-    zIndex: -2,
     position: "absolute",
     top: 0,
     left: 0,
     width: "100vw",
     color: "white",
+    padding: 10,
   },
   HeaderTitle: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    // padding: 30,
-  
-   fontSize: 25,
-   color: "white",
+    fontSize: 25,
+    color: "white",
   },
   HeaderBar: {
     flexDirection: "row",
@@ -114,28 +107,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     fontSize: 18,
     padding: 8,
-  },
-  // HeaderSearch: {
-  // 	marginVertical: 30,
-
-  HeaderWrap: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    alignItems: "flex-end",
-    width: "100%",
-    paddingTop: 10,
-    paddingBottom: 20,
-  },
-  bodyText: {
-    color: "#efd595",
-  },
-  profileImage: {
-    height: "10%",
-    width: "10%",
-    borderRadius: 5,
-    justifyContent: "flex-end",
-    alignItems: "flex-end",
   },
 });
 
