@@ -1,7 +1,23 @@
 import React from "react";
-import { View, StyleSheet, Text, Pressable } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Pressable,
+  useWindowDimensions,
+} from "react-native";
+import { stylesMobile, stylesWeb } from "./Styles";
 
 function Nav({ setCurrentPage }) {
+  const { width } = useWindowDimensions();
+  const widthBreakpoint = 1050;
+
+  let styles;
+  if (width < widthBreakpoint) {
+    styles = stylesMobile;
+  } else {
+    styles = stylesWeb;
+  }
   return (
     <View style={styles.Header}>
       <View>
@@ -58,12 +74,12 @@ function Nav({ setCurrentPage }) {
           >
             Contact
           </Text> */}
-               <Pressable onPress={() => setCurrentPage("Education")}>
+          <Pressable onPress={() => setCurrentPage("Education")}>
             <Text style={styles.headerText} name="Education">
               Education
             </Text>
           </Pressable>
-           <Pressable onPress={() => setCurrentPage("Contact")}>
+          <Pressable onPress={() => setCurrentPage("Contact")}>
             <Text style={styles.headerText} name="Contact">
               Contact
             </Text>
@@ -73,37 +89,5 @@ function Nav({ setCurrentPage }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  Header: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
-    backgroundColor: "#082c45",
-    width: "100vw",
-    color: "white",
-    padding: 10,
-  },
-  HeaderTitle: {
-    fontSize: 25,
-    color: "white",
-  },
-  HeaderBar: {
-    flexDirection: "row",
-    backgroundColor: "#082c45",
-    width: "100%",
-    padding: 5,
-    justifyContent: "space-around",
-    marginBottom: 0,
-  },
-  headerText: {
-    color: "white",
-    fontWeight: "bold",
-    alignItems: "center",
-    fontSize: 18,
-    padding: 8,
-  },
-});
 
 export default Nav;

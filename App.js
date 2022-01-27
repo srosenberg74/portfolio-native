@@ -32,7 +32,6 @@ export default function App() {
         {currentPage === "Education" && <Education />}
            {currentPage === "Contact" && <Contact />}
         </ScrollView>
-
         <StatusBar style="auto" />
       </View>
     </View>
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
   scrollView: {
     borderTopWidth: 2,
     borderColor: "#082c45",
-    height: "20vh",
+    height: "70vh",
   },
   navbar: {
     height: "10%",

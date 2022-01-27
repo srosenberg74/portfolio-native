@@ -16,7 +16,7 @@ function Career() {
   return (
     <View style={styles.layout}>
       <View style={styles.content}>
-        <Text style={styles.heading}>Career Development</Text>
+        <Text style={styles.CareerHeading}>Career Development</Text>
 
         <Text style={styles.subheadingCareer}>
           React Apprentice | Alphaworks | Sept 2021-current{" "}

@@ -9,7 +9,9 @@ import {
 import { stylesMobile, stylesWeb } from "./Styles";
 
 export default function Contact() {
-  const [text, onChangeText] = useState("");
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   const { width } = useWindowDimensions();
   const widthBreakpoint = 1050;
@@ -23,9 +25,6 @@ export default function Contact() {
 
   const sendContactForm = (event) => {
     event.preventDefault();
-    const name = document.getElementById("name").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
 
     let mailto = `mailto:samrose4@gmail.com`;
     mailto += `?subject=${subject}`;
@@ -38,42 +37,44 @@ export default function Contact() {
     <View style={styles.layout}>
       <View style={styles.contactContent}>
         <Text style={styles.heading}>Contact Me</Text>
-        <View className="contact-body">
-          <View>
-            <View className="mb-3">
+        <View >
+          <View style={styles.center}>
+            <View >
               <Text style={{ color: "#082c45" }}>Your Name*</Text>
               <TextInput
               style={styles.input}
-                value={text}
-                onChangeText={onChangeText}
+                value={name}
+                onChangeText={setName}
                 id="name"
                 required
               />
             </View>
-            <View className="mb-3">
+            <View>
               <Text style={{ color: "#082c45" }}>Subject*</Text>
               <TextInput
-                value={text}
-                onChangeText={onChangeText}
+              style={styles.input}
+                value={subject}
+                onChangeText={setSubject}
                 id="subject"
                 required
               />
             </View>
-            <View className="mb-3">
+            <View>
               <Text style={{ color: "#082c45" }}>Your Message*</Text>
               <TextInput
-                value={text}
-                onChangeText={onChangeText}
+              style={styles.input}
+                value={message}
+                onChangeText={setMessage}
                 rows="3"
                 required
               ></TextInput>
             </View>
             <Pressable
               type="submit"
-              style={{ backgroundColor: "#082c45", color: "white" }}
+              style={styles.submit}
               onPress={(event) => sendContactForm(event)}
             >
-              <Text>Submit</Text>
+              <Text style={styles.submitText}>Submit</Text>
             </Pressable>
           </View>
         </View>
