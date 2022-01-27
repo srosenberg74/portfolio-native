@@ -3,7 +3,7 @@ import { stylesMobile, stylesWeb } from "./Styles";
 import { View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import Nav from "../components/Nav";
 
-function Career({ navigation }) {
+function Career() {
   const { width } = useWindowDimensions();
   const widthBreakpoint = 1050;
 
@@ -15,7 +15,6 @@ function Career({ navigation }) {
   }
   return (
     <View style={styles.layout}>
-      <Nav navigation={navigation} />
       <View style={styles.content}>
         <Text style={styles.heading}>Career Development</Text>
 

@@ -7,9 +7,8 @@ import {
   Image,
   useWindowDimensions,
 } from "react-native";
-import Nav from "../components/Nav";
 
-function Study({ navigation }) {
+function Study() {
   const { width } = useWindowDimensions();
   const widthBreakpoint = 1050;
 
@@ -22,7 +21,6 @@ function Study({ navigation }) {
 
   return (
     <View style={styles.layout}>
-      <Nav navigation={navigation} />
       <View style={styles.content}>
       <Text style={styles.heading}>Areas of Study</Text>
       <Text style={styles.body}>

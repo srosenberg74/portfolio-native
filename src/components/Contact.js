@@ -1,6 +1,26 @@
-import "../App.css";
+import { useState } from "react";
+import {
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  useWindowDimensions,
+} from "react-native";
+import { stylesMobile, stylesWeb } from "./Styles";
 
 export default function Contact() {
+  const [text, onChangeText] = useState("");
+
+  const { width } = useWindowDimensions();
+  const widthBreakpoint = 1050;
+
+  let styles;
+  if (width < widthBreakpoint) {
+    styles = stylesMobile;
+  } else {
+    styles = stylesWeb;
+  }
+
   const sendContactForm = (event) => {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -15,68 +35,49 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact content">
-      <h1 className="contact" style={{ color: "#082c45a8" }}>
-        Contact Me
-      </h1>
-      <div className="contact-body">
-        <form>
-          <div className="mb-3">
-            <label
-              htmlFor="name"
-              className="form-label"
-              style={{ color: "#082c45" }}
+    <View style={styles.layout}>
+      <View style={styles.contactContent}>
+        <Text style={styles.heading}>Contact Me</Text>
+        <View className="contact-body">
+          <View>
+            <View className="mb-3">
+              <Text style={{ color: "#082c45" }}>Your Name*</Text>
+              <TextInput
+              style={styles.input}
+                value={text}
+                onChangeText={onChangeText}
+                id="name"
+                required
+              />
+            </View>
+            <View className="mb-3">
+              <Text style={{ color: "#082c45" }}>Subject*</Text>
+              <TextInput
+                value={text}
+                onChangeText={onChangeText}
+                id="subject"
+                required
+              />
+            </View>
+            <View className="mb-3">
+              <Text style={{ color: "#082c45" }}>Your Message*</Text>
+              <TextInput
+                value={text}
+                onChangeText={onChangeText}
+                rows="3"
+                required
+              ></TextInput>
+            </View>
+            <Pressable
+              type="submit"
+              style={{ backgroundColor: "#082c45", color: "white" }}
+              onPress={(event) => sendContactForm(event)}
             >
-              Your Name*
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label
-              htmlFor="subject"
-              className="form-label"
-              style={{ color: "#082c45" }}
-            >
-              Subject*
-            </label>
-            <input
-              type="text"
-              name="subject"
-              id="subject"
-              className="form-control"
-            />
-          </div>
-          <div className="mb-3">
-            <label
-              htmlFor="message"
-              className="form-label"
-              style={{ color: "#082c45" }}
-            >
-              Your Message*
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="form-control"
-              rows="3"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="btn"
-            style={{ backgroundColor: "#082c45", color: "white" }}
-            onClick={(event) => sendContactForm(event)}
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+              <Text>Submit</Text>
+            </Pressable>
+          </View>
+        </View>
+      </View>
+    </View>
   );
 }

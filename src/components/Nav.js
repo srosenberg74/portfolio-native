@@ -1,48 +1,37 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableHighlight } from "react-native";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 
-function Nav({ navigation }) {
+function Nav({ setCurrentPage }) {
   return (
-    <View style={styles.Header} navigation={navigation}>
-      <TouchableHighlight
-        navigation={navigation}
-        onPress={navigation.navigate("Profile")}
-      >
-        <View navigation={navigation}>
+    <View style={styles.Header}>
+      <View>
+        <Pressable onPress={() => setCurrentPage("Profile")}>
           <View>
-            <Text style={styles.HeaderTitle}>Sam Rosenberg</Text>
+            <View>
+              <Text style={styles.HeaderTitle}>Sam Rosenberg</Text>
+            </View>
           </View>
-        </View>
-      </TouchableHighlight>
-      <TouchableHighlight>
-        <View style={styles.HeaderBar} navigation={navigation}>
-          <Text
-            navigation={navigation}
-            style={styles.headerText}
-            name="Profile"
-            onPress={() => navigation.navigate("Profile")}
-          >
-            Profile
-          </Text>
+        </Pressable>
+      </View>
+      <View>
+        <View style={styles.HeaderBar}>
+          <Pressable onPress={() => setCurrentPage("Profile")}>
+            <Text style={styles.headerText} name="Profile">
+              Profile
+            </Text>
+          </Pressable>
 
-          <Text
-            navigation={navigation}
-            style={styles.headerText}
-            name="Study"
-            onPress={() => navigation.navigate("Study")}
-          >
-            Study
-          </Text>
-
-          <Text
-            navigation={navigation}
-            style={styles.headerText}
-            name="Career"
-            onPress={() => navigation.navigate("Career")}
-          >
-            Career
-          </Text>
-{/* 
+          <Pressable onPress={() => setCurrentPage("Study")}>
+            <Text style={styles.headerText} name="Study">
+              Study
+            </Text>
+          </Pressable>
+          <Pressable onPress={() => setCurrentPage("Career")}>
+            <Text style={styles.headerText} name="Career">
+              Career
+            </Text>
+          </Pressable>
+          {/* 
           <Text
             navigation={navigation}
             style={styles.headerText}
@@ -69,8 +58,18 @@ function Nav({ navigation }) {
           >
             Contact
           </Text> */}
+               <Pressable onPress={() => setCurrentPage("Education")}>
+            <Text style={styles.headerText} name="Education">
+              Education
+            </Text>
+          </Pressable>
+           <Pressable onPress={() => setCurrentPage("Contact")}>
+            <Text style={styles.headerText} name="Contact">
+              Contact
+            </Text>
+          </Pressable>
         </View>
-      </TouchableHighlight>
+      </View>
     </View>
   );
 }
@@ -82,9 +81,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "#082c45",
-    position: "absolute",
-    top: 0,
-    left: 0,
     width: "100vw",
     color: "white",
     padding: 10,

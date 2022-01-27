@@ -10,7 +10,7 @@ import {
 import Nav from "../components/Nav";
 import { stylesMobile, stylesWeb } from "./Styles";
 
-function Profile({ navigation }) {
+function Profile() {
   const { width } = useWindowDimensions();
   const widthBreakpoint = 1050;
 
@@ -22,8 +22,7 @@ function Profile({ navigation }) {
   }
 
   return (
-    <View style={styles.ProfileLayout} navigation={navigation}>
-        <Nav navigation={navigation} />
+    <View style={styles.ProfileLayout}>
       <View style={styles.column}>
         <Image
           source={require("../images/Sam.jpg")}

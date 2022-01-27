@@ -9,19 +9,22 @@ export const stylesWeb = StyleSheet.create({
     columnWidth: "50%",
     display: "flex",
     flexDirection: "row",
-    paddingTop: 120,
+    paddingTop: 70,
   },
   layout: {
     minHeight: "100vh",
     backgroundColor: "silver",
     padding: "40px",
-    paddingTop: 120,
+    paddingTop: 70,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
   },
   content: {
     maxWidth: 900,
+  },
+  contactContent: {
+    width: 500,
   },
   profilePic: {
     height: 450,
@@ -47,6 +50,7 @@ export const stylesWeb = StyleSheet.create({
   subheading: {
     fontSize: 30,
     fontWeight: "bold",
+    color: "#082c45d7",
     paddingRight: 5,
   },
   subheadingCareer: {
@@ -55,6 +59,12 @@ export const stylesWeb = StyleSheet.create({
     color: "#082c45d7",
     paddingBottom: 8,
   },
+  input: {
+    width: 400,
+    backgroundColor: "white",
+    height: 26,
+    borderRadius: 5,
+  },
 });
 
 export const stylesMobile = StyleSheet.create({
@@ -62,13 +72,13 @@ export const stylesMobile = StyleSheet.create({
     minHeight: "100vh",
     backgroundColor: "silver",
     padding: "40px",
-    paddingTop: 120,
+    paddingTop: 70,
   },
   layout: {
     minHeight: "100vh",
     backgroundColor: "silver",
     padding: 15,
-    paddingTop: 120,
+    paddingTop: 70,
   },
   profilePic: {
     height: 300,
