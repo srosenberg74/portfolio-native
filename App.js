@@ -29,8 +29,8 @@ export default function App() {
           {/* <Education />
         <Portfolio />
         <Contact /> */}
-        {currentPage === "Education" && <Education />}
-           {currentPage === "Contact" && <Contact />}
+          {currentPage === "Education" && <Education />}
+          {currentPage === "Contact" && <Contact />}
         </ScrollView>
         <StatusBar style="auto" />
       </View>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     height: "70vh",
   },
   navbar: {
-    height: "10%",
+    height: "10vh",
     top: 0,
   },
   scrollContentContainer: {

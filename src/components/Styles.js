@@ -2,17 +2,15 @@ import { StyleSheet } from "react-native";
 
 export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
-    height: "100vh",
+    height: "90vh",
     backgroundColor: "silver",
     padding: "80px",
-    columnCount: "2",
-    columnWidth: "50%",
     display: "flex",
     flexDirection: "row",
     paddingTop: 70,
   },
   layout: {
-    minHeight: "100vh",
+    minHeight: "90vh",
     backgroundColor: "silver",
     padding: "40px",
     paddingTop: 70,
@@ -26,28 +24,28 @@ export const stylesWeb = StyleSheet.create({
   contactContent: {
     width: 600,
     borderRadius: 8,
-    boxShadow: "6px 10px 11px 2px dimgray, -1px -1px 11px dimgray",
+    // boxShadow: "6px 10px 11px 2px dimgray, -1px -1px 11px dimgray",
     padding: 30,
   },
   profilePic: {
     height: 450,
     width: 450,
     alignSelf: "center",
-    boxShadow: "4px 4px 12px black",
+    // boxShadow: "4px 4px 12px black",
   },
   heading: {
     fontSize: 50,
     fontWeight: "bold",
     color: "#082c45",
     paddingBottom: 20,
-    textShadow: "4px 12px 11px rgb(85, 84, 84)",
+    // textShadow: "4px 12px 11px rgb(85, 84, 84)",
   },
   CareerHeading: {
     fontSize: 50,
     fontWeight: "bold",
     color: "#082c45",
     paddingBottom: 20,
-    textShadow: "4px 12px 11px rgb(85, 84, 84)",
+    // textShadow: "4px 12px 11px rgb(85, 84, 84)",
   },
   body: {
     fontSize: 22,
@@ -83,7 +81,7 @@ export const stylesWeb = StyleSheet.create({
     margin: 20,
     padding: 10,
     borderRadius: 4,
-    boxShadow: "4px 8px 11px dimgray",
+    // boxShadow: "4px 8px 11px dimgray",
   },
   submitText: {
     color: "white",
@@ -101,6 +99,7 @@ export const stylesWeb = StyleSheet.create({
     width: "100vw",
     color: "white",
     padding: 10,
+    maxHeight: "10vh",
   },
   HeaderTitle: {
     fontSize: 25,
@@ -125,13 +124,13 @@ export const stylesWeb = StyleSheet.create({
 
 export const stylesMobile = StyleSheet.create({
   ProfileLayout: {
-    minHeight: "100vh",
+    minHeight: "90vh",
     backgroundColor: "silver",
     padding: "40px",
     paddingTop: 30,
   },
   layout: {
-    minHeight: "100vh",
+    minHeight: "90vh",
     backgroundColor: "silver",
     padding: 15,
     paddingTop: 30,
@@ -140,7 +139,7 @@ export const stylesMobile = StyleSheet.create({
     height: 300,
     width: 300,
     alignSelf: "center",
-    boxShadow: "4px 4px 12px black",
+    // boxShadow: "4px 4px 12px black",
     marginBottom: 20,
   },
   heading: {
@@ -173,7 +172,7 @@ export const stylesMobile = StyleSheet.create({
   },
   contactContent: {
     borderRadius: 8,
-    boxShadow: "4px 6px 11px 2px dimgray",
+    // boxShadow: "4px 6px 11px 2px dimgray",
     padding: 30,
   },
   input: {
@@ -190,7 +189,7 @@ export const stylesMobile = StyleSheet.create({
     margin: 20,
     padding: 10,
     borderRadius: 4,
-    boxShadow: "4px 8px 11px dimgray",
+    // boxShadow: "4px 8px 11px dimgray",
   },
   submitText: {
     color: "white",

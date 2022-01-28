@@ -47,33 +47,6 @@ function Nav({ setCurrentPage }) {
               Career
             </Text>
           </Pressable>
-          {/* 
-          <Text
-            navigation={navigation}
-            style={styles.headerText}
-            name="Education"
-            onPress={() => navigation.navigate("Education")}
-          >
-            Education
-          </Text>
-
-          <Text
-            navigation={navigation}
-            style={styles.headerText}
-            name="Portfolio"
-            onPress={() => navigation.navigate("Portfolio")}
-          >
-            Portfolio
-          </Text>
-
-          <Text
-            style={styles.headerText}
-            navigation={navigation}
-            name="Contact"
-            onPress={() => navigation.navigate("Contact")}
-          >
-            Contact
-          </Text> */}
           <Pressable onPress={() => setCurrentPage("Education")}>
             <Text style={styles.headerText} name="Education">
               Education

@@ -80,7 +80,7 @@ function Profile() {
 //     color: "#082c45d7",
 //   },
 //   column: {
-//     flex: "40%",
+//
 //   },
 // });
 
