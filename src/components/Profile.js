@@ -54,57 +54,5 @@ function Profile() {
   );
 }
 
-// const stylesWeb = StyleSheet.create({
-//   layout: {
-//     height: "100vh",
-//     backgroundColor: "silver",
-//     padding: "80px",
-//     columnCount: "2",
-//     columnWidth: "50%",
-//     display: "flex",
-//     flexDirection: "row",
-//     paddingTop: 120,
-//   },
-//   profilePic: {
-//     height: 450,
-//     width: 450,
-//     alignSelf: "center",
-//   },
-//   heading: {
-//     fontSize: 50,
-//     fontWeight: "bold",
-//     color: "#082c45",
-//   },
-//   body: {
-//     fontSize: 22,
-//     color: "#082c45d7",
-//   },
-//   column: {
-//
-//   },
-// });
-
-// const stylesMobile = StyleSheet.create({
-//   layout: {
-//     minHeight: "100vh",
-//     backgroundColor: "silver",
-//     padding: "40px",
-//     paddingTop: 120,
-//   },
-//   profilePic: {
-//     height: 300,
-//     width: 300,
-//     alignSelf: "center",
-//   },
-//   heading: {
-//     fontSize: 50,
-//     fontWeight: "bold",
-//     color: "#082c45",
-//   },
-//   body: {
-//     fontSize: 22,
-//     color: "#082c45d7",
-//   },
-// });
 
 export default Profile;

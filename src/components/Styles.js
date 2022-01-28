@@ -2,17 +2,19 @@ import { StyleSheet } from "react-native";
 
 export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
-    height: "90vh",
+    height: "100%",
     backgroundColor: "silver",
-    padding: "80px",
+    background: "cover",
+    padding: 80,
     display: "flex",
     flexDirection: "row",
     paddingTop: 70,
   },
   layout: {
-    minHeight: "90vh",
+    minHeight: "100%",
     backgroundColor: "silver",
-    padding: "40px",
+    background: "cover",
+    padding: 40,
     paddingTop: 70,
     display: "flex",
     flexDirection: "column",
@@ -24,28 +26,25 @@ export const stylesWeb = StyleSheet.create({
   contactContent: {
     width: 600,
     borderRadius: 8,
-    // boxShadow: "6px 10px 11px 2px dimgray, -1px -1px 11px dimgray",
+
     padding: 30,
   },
   profilePic: {
     height: 450,
     width: 450,
     alignSelf: "center",
-    // boxShadow: "4px 4px 12px black",
   },
   heading: {
     fontSize: 50,
     fontWeight: "bold",
     color: "#082c45",
     paddingBottom: 20,
-    // textShadow: "4px 12px 11px rgb(85, 84, 84)",
   },
   CareerHeading: {
     fontSize: 50,
     fontWeight: "bold",
     color: "#082c45",
     paddingBottom: 20,
-    // textShadow: "4px 12px 11px rgb(85, 84, 84)",
   },
   body: {
     fontSize: 22,
@@ -53,7 +52,7 @@ export const stylesWeb = StyleSheet.create({
     paddingBottom: 18,
   },
   column: {
-    flex: "40%",
+    width: "50%",
   },
   subheading: {
     fontSize: 30,
@@ -81,7 +80,6 @@ export const stylesWeb = StyleSheet.create({
     margin: 20,
     padding: 10,
     borderRadius: 4,
-    // boxShadow: "4px 8px 11px dimgray",
   },
   submitText: {
     color: "white",
@@ -96,10 +94,10 @@ export const stylesWeb = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "#082c45",
-    width: "100vw",
+    width: "100%",
     color: "white",
     padding: 10,
-    maxHeight: "10vh",
+    maxHeight: "100%",
   },
   HeaderTitle: {
     fontSize: 25,
@@ -120,17 +118,36 @@ export const stylesWeb = StyleSheet.create({
     fontSize: 18,
     padding: 8,
   },
+  container: {
+    flex: 1,
+    justifyContent: "space-between",
+  },
+  scrollView: {
+    borderTopWidth: 2,
+    borderColor: "#082c45",
+    height: "70%",
+  },
+  navbar: {
+    height: "10%",
+    top: 0,
+  },
+  scrollContentContainer: {
+    justifyContent: "space-between",
+  },
+  main: {
+    flex: 1,
+  },
 });
 
 export const stylesMobile = StyleSheet.create({
   ProfileLayout: {
-    minHeight: "90vh",
+    minHeight: 800,
     backgroundColor: "silver",
-    padding: "40px",
+    padding: 40,
     paddingTop: 30,
   },
   layout: {
-    minHeight: "90vh",
+    minHeight: 800,
     backgroundColor: "silver",
     padding: 15,
     paddingTop: 30,
@@ -139,7 +156,7 @@ export const stylesMobile = StyleSheet.create({
     height: 300,
     width: 300,
     alignSelf: "center",
-    // boxShadow: "4px 4px 12px black",
+
     marginBottom: 20,
   },
   heading: {
@@ -172,7 +189,7 @@ export const stylesMobile = StyleSheet.create({
   },
   contactContent: {
     borderRadius: 8,
-    // boxShadow: "4px 6px 11px 2px dimgray",
+
     padding: 30,
   },
   input: {
@@ -189,7 +206,6 @@ export const stylesMobile = StyleSheet.create({
     margin: 20,
     padding: 10,
     borderRadius: 4,
-    // boxShadow: "4px 8px 11px dimgray",
   },
   submitText: {
     color: "white",
@@ -204,7 +220,7 @@ export const stylesMobile = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "#082c45",
-    width: "100vw",
+    width: "100%",
     color: "white",
     padding: 10,
     paddingTop: 20,
@@ -227,5 +243,24 @@ export const stylesMobile = StyleSheet.create({
     alignItems: "center",
     fontSize: 12,
     padding: 8,
+  },
+  container: {
+    flex: 1,
+    justifyContent: "space-between",
+  },
+  scrollView: {
+    borderTopWidth: 2,
+    borderColor: "#082c45",
+    height: "70%",
+  },
+  navbar: {
+    height: "20%",
+    top: 0,
+  },
+  scrollContentContainer: {
+    justifyContent: "space-between",
+  },
+  main: {
+    flex: 1,
   },
 });
