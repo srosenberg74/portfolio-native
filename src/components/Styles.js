@@ -4,7 +4,6 @@ export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
     height: "100%",
     backgroundColor: "silver",
-    background: "cover",
     padding: 80,
     display: "flex",
     flexDirection: "row",
@@ -13,7 +12,6 @@ export const stylesWeb = StyleSheet.create({
   layout: {
     minHeight: "100%",
     backgroundColor: "silver",
-    background: "cover",
     padding: 40,
     paddingTop: 70,
     display: "flex",
@@ -136,6 +134,7 @@ export const stylesWeb = StyleSheet.create({
   },
   main: {
     flex: 1,
+    backgroundColor: "silver",
   },
 });
 
@@ -262,5 +261,6 @@ export const stylesMobile = StyleSheet.create({
   },
   main: {
     flex: 1,
+    backgroundColor: "silver",
   },
 });
