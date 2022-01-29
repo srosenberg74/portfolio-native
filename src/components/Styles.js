@@ -136,6 +136,41 @@ export const stylesWeb = StyleSheet.create({
     flex: 1,
     backgroundColor: "silver",
   },
+  entry: {
+    width: "94%",
+    padding: 10,
+    borderColor: "#082c45",
+    borderWidth: 1,
+    borderRadius: 8,
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  video: {
+    height: 320,
+    width: 440,
+  },
+  entryLink: {
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: "#082c45",
+    padding: 10,
+    borderRadius: 20,
+    width: 60,
+    marginRight: 30,
+  },
+  linkContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignContent: "space-between",
+    marginTop: 10,
+  },
+  entryText: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 20,
+  },
 });
 
 export const stylesMobile = StyleSheet.create({
@@ -179,6 +214,7 @@ export const stylesMobile = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 8,
+    color: "#082c45d7",
   },
   subheadingCareer: {
     fontSize: 30,
@@ -212,6 +248,7 @@ export const stylesMobile = StyleSheet.create({
   },
   center: {
     margin: "auto",
+    justifyContent: "center",
   },
   Header: {
     flex: 1,
@@ -232,7 +269,7 @@ export const stylesMobile = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#082c45",
     width: "100%",
-    padding: 5,
+    padding: 1,
     justifyContent: "space-around",
     marginBottom: 0,
   },
@@ -241,7 +278,7 @@ export const stylesMobile = StyleSheet.create({
     fontWeight: "bold",
     alignItems: "center",
     fontSize: 12,
-    padding: 8,
+    padding: 4,
   },
   container: {
     flex: 1,
@@ -253,7 +290,7 @@ export const stylesMobile = StyleSheet.create({
     height: "70%",
   },
   navbar: {
-    height: "20%",
+    height: "15%",
     top: 0,
   },
   scrollContentContainer: {
@@ -262,5 +299,40 @@ export const stylesMobile = StyleSheet.create({
   main: {
     flex: 1,
     backgroundColor: "silver",
+  },
+  entry: {
+    width: "94%",
+    padding: 10,
+    borderColor: "#082c45",
+    borderWidth: 1,
+    borderRadius: 8,
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  video: {
+    height: 220,
+    width: 240,
+  },
+  entryLink: {
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: "#082c45",
+    padding: 10,
+    borderRadius: 20,
+    width: 60,
+    marginRight: 30,
+  },
+  linkContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignContent: "space-between",
+    marginTop: 10,
+  },
+  entryText: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 20,
   },
 });

@@ -52,6 +52,11 @@ function Nav({ setCurrentPage }) {
               Education
             </Text>
           </Pressable>
+          <Pressable onPress={() => setCurrentPage("Portfolio")}>
+            <Text style={styles.headerText} name="Portfolio">
+              Portfolio
+            </Text>
+          </Pressable>
           <Pressable onPress={() => setCurrentPage("Contact")}>
             <Text style={styles.headerText} name="Contact">
               Contact

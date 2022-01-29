@@ -7,6 +7,7 @@ import Study from "./src/components/Study";
 import Career from "./src/components/Career";
 import Contact from "./src/components/Contact";
 import Education from "./src/components/Education";
+import Portfolio from "./src/components/Portfolio";
 import Nav from "./src/components/Nav";
 import { stylesMobile, stylesWeb } from "./src/components/Styles";
 
@@ -41,6 +42,7 @@ export default function App() {
         <Portfolio />
         <Contact /> */}
           {currentPage === "Education" && <Education />}
+          {currentPage === "Portfolio" && <Portfolio />}
           {currentPage === "Contact" && <Contact />}
         </ScrollView>
         <StatusBar style="auto" />
