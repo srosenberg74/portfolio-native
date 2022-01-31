@@ -171,6 +171,9 @@ export const stylesWeb = StyleSheet.create({
     textAlign: "center",
     fontSize: 20,
   },
+  portfolioColumn: {
+    alignItems: "center",
+  },
 });
 
 export const stylesMobile = StyleSheet.create({
@@ -304,7 +307,7 @@ export const stylesMobile = StyleSheet.create({
     width: "94%",
     padding: 10,
     borderColor: "#082c45",
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: 8,
     alignItems: "center",
     marginBottom: 20,
@@ -334,5 +337,8 @@ export const stylesMobile = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontSize: 20,
+  },
+  portfolioColumn: {
+    alignItems: "center",
   },
 });
