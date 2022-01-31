@@ -36,14 +36,13 @@ export default function Contact() {
   return (
     <View style={styles.layout}>
       <View style={styles.contactContent}>
-       
-        <View >
+        <View>
           <View style={styles.center}>
-          <Text style={styles.heading}>Contact Me</Text>
-            <View >
+            <Text style={styles.heading}>Contact Me</Text>
+            <View>
               <Text style={{ color: "#082c45" }}>Your Name*</Text>
               <TextInput
-              style={styles.input}
+                style={styles.input}
                 value={name}
                 onChangeText={setName}
                 id="name"
@@ -53,7 +52,7 @@ export default function Contact() {
             <View>
               <Text style={{ color: "#082c45" }}>Subject*</Text>
               <TextInput
-              style={styles.input}
+                style={styles.input}
                 value={subject}
                 onChangeText={setSubject}
                 id="subject"
@@ -63,7 +62,7 @@ export default function Contact() {
             <View>
               <Text style={{ color: "#082c45" }}>Your Message*</Text>
               <TextInput
-              style={styles.input}
+                style={styles.input}
                 value={message}
                 onChangeText={setMessage}
                 rows="3"
