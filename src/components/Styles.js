@@ -186,7 +186,7 @@ export const stylesMobile = StyleSheet.create({
   layout: {
     minHeight: 800,
     backgroundColor: "silver",
-    padding: 15,
+    padding: 25,
     paddingTop: 30,
   },
   profilePic: {
