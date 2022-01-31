@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
-    height: "100%",
+    height: 500,
     backgroundColor: "silver",
     padding: 80,
     display: "flex",
@@ -123,10 +123,10 @@ export const stylesWeb = StyleSheet.create({
   scrollView: {
     borderTopWidth: 2,
     borderColor: "#082c45",
-    height: "70%",
+    height: 400,
   },
   navbar: {
-    height: "10%",
+    height: 70,
     top: 0,
   },
   scrollContentContainer: {
@@ -138,7 +138,7 @@ export const stylesWeb = StyleSheet.create({
   },
   entry: {
     width: "94%",
-    padding: 10,
+    padding: 20,
     borderColor: "#082c45",
     borderWidth: 1,
     borderRadius: 8,
@@ -190,7 +190,6 @@ export const stylesMobile = StyleSheet.create({
     height: 300,
     width: 300,
     alignSelf: "center",
-
     marginBottom: 20,
   },
   heading: {
@@ -241,6 +240,7 @@ export const stylesMobile = StyleSheet.create({
     margin: 20,
     padding: 10,
     borderRadius: 4,
+    alignItems: "center",
   },
   submitText: {
     color: "white",

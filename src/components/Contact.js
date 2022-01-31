@@ -5,6 +5,7 @@ import {
   Pressable,
   TextInput,
   useWindowDimensions,
+  Linking,
 } from "react-native";
 import { stylesMobile, stylesWeb } from "./Styles";
 
@@ -30,7 +31,7 @@ export default function Contact() {
     mailto += `?subject=${subject}`;
     mailto += `&body=${message}`;
 
-    window.open(mailto);
+    Linking.openURL(mailto);
   };
 
   return (
