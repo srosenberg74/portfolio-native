@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { stylesMobile, stylesWeb } from "./Styles";
+import Entry from "./Entry";
+import { portfolioItems } from "./Data";
 import * as Linking from "expo-linking";
 import {
   View,
@@ -23,68 +25,22 @@ function Portfolio() {
     styles = stylesWeb;
   }
 
+  const generateEntries = portfolioItems.map((item, index) => (
+    <Entry
+      key={index}
+      name={item.name}
+      uri={item.uri}
+      description={item.description}
+      linkToSite={item.linkToSite}
+      linkToGithub={item.linkToGithub}
+    />
+  ));
+
   return (
     <View style={styles.layout}>
       <Text style={styles.heading}>Portfolio</Text>
       <View style={styles.column}>
-        <View style={styles.portfolioColumn}>
-          <View style={styles.entry}>
-            <Image
-              style={styles.video}
-              source={require("../images/ecard.png")}
-              alt=""
-            />
-
-            <Text style={styles.subheading}>Holiday Greeting eCard</Text>
-            <Text style={styles.body}>A Reshareable Greeting eCard</Text>
-            <View style={styles.linkContainer}>
-              <Pressable
-                style={styles.entryLink}
-                onPress={() =>
-                  Linking.openURL("https://srosenberg74.github.io/ecard/")
-                }
-              >
-                <Text style={styles.entryText}>Site</Text>
-              </Pressable>
-              <Pressable
-                onPress={() =>
-                  Linking.openURL("https://github.com/srosenberg74/ecard")
-                }
-              >
-                <AntDesign name="github" size={50} color="#082c45" />
-              </Pressable>
-            </View>
-          </View>
-          <View style={styles.entry}>
-            <Image
-              style={styles.video}
-              source={require("../images/Decidr.png")}
-              alt=""
-            />
-
-            <Text style={styles.subheading}>Decidr</Text>
-            <Text style={styles.body}>
-              An app that helps you make decisions!
-            </Text>
-            <View style={styles.linkContainer}>
-              <Pressable
-                style={styles.entryLink}
-                onPress={() =>
-                  Linking.openURL("https://srosenberg74.github.io/decidr/")
-                }
-              >
-                <Text style={styles.entryText}>Site</Text>
-              </Pressable>
-              <Pressable
-                onPress={() =>
-                  Linking.openURL("https://github.com/srosenberg74/decidr")
-                }
-              >
-                <AntDesign name="github" size={50} color="#082c45" />
-              </Pressable>
-            </View>
-          </View>
-        </View>
+        <View style={styles.portfolioColumn}>{generateEntries}</View>
       </View>
     </View>
   );
