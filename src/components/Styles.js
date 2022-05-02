@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
     height: 500,
-    backgroundColor: "silver",
+    backgroundColor: "#082c45",
     padding: 80,
     display: "flex",
     flexDirection: "row",
@@ -11,7 +11,7 @@ export const stylesWeb = StyleSheet.create({
   },
   layout: {
     minHeight: "100%",
-    backgroundColor: "silver",
+    backgroundColor: "#082c45",
     padding: 40,
     paddingTop: 70,
     display: "flex",
@@ -35,18 +35,24 @@ export const stylesWeb = StyleSheet.create({
   heading: {
     fontSize: 50,
     fontWeight: "bold",
-    color: "#082c45",
+    color: "white",
+    paddingBottom: 20,
+  },
+  headingPortfolio: {
+    fontSize: 50,
+    fontWeight: "bold",
+    color: "white",
     paddingBottom: 20,
   },
   CareerHeading: {
     fontSize: 50,
     fontWeight: "bold",
-    color: "#082c45",
+    color: "white",
     paddingBottom: 20,
   },
   body: {
     fontSize: 22,
-    color: "#082c45d7",
+    color: "white",
     paddingBottom: 18,
   },
   column: {
@@ -55,13 +61,13 @@ export const stylesWeb = StyleSheet.create({
   subheading: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#082c45d7",
+    color: "white",
     paddingRight: 5,
   },
   subheadingCareer: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#082c45d7",
+    color: "white",
     paddingBottom: 8,
   },
   input: {
@@ -74,13 +80,13 @@ export const stylesWeb = StyleSheet.create({
   },
   submit: {
     width: 80,
-    backgroundColor: "#082c45",
+    backgroundColor: "white",
     margin: 20,
     padding: 10,
     borderRadius: 4,
   },
   submitText: {
-    color: "white",
+    color: "#082c45",
     margin: "auto",
   },
   center: {
@@ -134,7 +140,7 @@ export const stylesWeb = StyleSheet.create({
   },
   main: {
     flex: 1,
-    backgroundColor: "silver",
+    backgroundColor: "#082c45",
   },
   entry: {
     width: "94%",
@@ -144,17 +150,21 @@ export const stylesWeb = StyleSheet.create({
     borderRadius: 8,
     alignItems: "center",
     marginBottom: 20,
+    marginTop: 20,
+    marginBottom: 30,
   },
   video: {
     height: 320,
     width: 440,
+    borderRadius: 12,
+    marginBottom: 14,
   },
   entryLink: {
-    color: "white",
+    color: "#082c45",
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "#082c45",
-    padding: 10,
+    backgroundColor: "white",
+    padding: 5,
     borderRadius: 20,
     width: 60,
     marginRight: 30,
@@ -167,7 +177,7 @@ export const stylesWeb = StyleSheet.create({
     marginTop: 10,
   },
   entryText: {
-    color: "white",
+    color: "#082c45",
     textAlign: "center",
     fontSize: 20,
   },
@@ -178,14 +188,14 @@ export const stylesWeb = StyleSheet.create({
 
 export const stylesMobile = StyleSheet.create({
   ProfileLayout: {
-    minHeight: 800,
-    backgroundColor: "silver",
+    
+    backgroundColor: "#082c45",
     padding: 40,
     paddingTop: 30,
   },
   layout: {
-    minHeight: 800,
-    backgroundColor: "silver",
+   
+    backgroundColor: "#082c45",
     padding: 25,
     paddingTop: 30,
   },
@@ -196,32 +206,39 @@ export const stylesMobile = StyleSheet.create({
     marginBottom: 20,
   },
   heading: {
-    fontSize: 50,
+    fontSize: 35,
     fontWeight: "bold",
-    color: "#082c45",
+    color: "white",
     paddingBottom: 20,
   },
-  CareerHeading: {
-    fontSize: 44,
+  headingPortfolio: {
+    fontSize: 35,
     fontWeight: "bold",
-    color: "#082c45",
+    color: "white",
+    paddingBottom: 20,
+    alignSelf: "center",
+  },
+  CareerHeading: {
+    fontSize: 40,
+    fontWeight: "bold",
+    color: "white",
     paddingBottom: 20,
   },
   body: {
     fontSize: 22,
-    color: "#082c45d7",
+    color: "white",
     paddingBottom: 10,
   },
   subheading: {
     fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 8,
-    color: "#082c45d7",
+    color: "white",
   },
   subheadingCareer: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#082c45d7",
+    color: "white",
     paddingBottom: 5,
   },
   contactContent: {
@@ -230,7 +247,7 @@ export const stylesMobile = StyleSheet.create({
     padding: 30,
   },
   input: {
-    width: 200,
+    width: "100%",
     backgroundColor: "white",
     height: 26,
     borderRadius: 5,
@@ -239,14 +256,14 @@ export const stylesMobile = StyleSheet.create({
   },
   submit: {
     width: 80,
-    backgroundColor: "#082c45",
+    backgroundColor: "white",
     margin: 20,
     padding: 10,
     borderRadius: 4,
     alignItems: "center",
   },
   submitText: {
-    color: "white",
+    color: "#082c45",
     margin: "auto",
   },
   center: {
@@ -301,7 +318,7 @@ export const stylesMobile = StyleSheet.create({
   },
   main: {
     flex: 1,
-    backgroundColor: "silver",
+    backgroundColor: "#082c45",
   },
   entry: {
     width: "94%",
@@ -310,18 +327,21 @@ export const stylesMobile = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 8,
     alignItems: "center",
-    marginBottom: 20,
+    marginTop: 20,
+    marginBottom: 30,
   },
   video: {
     height: 220,
     width: 240,
+    borderRadius: 12,
+    marginBottom: 14,
   },
   entryLink: {
-    color: "white",
+    color: "#082c45",
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "#082c45",
-    padding: 10,
+    backgroundColor: "white",
+    padding: 5,
     borderRadius: 20,
     width: 60,
     marginRight: 30,
@@ -334,7 +354,7 @@ export const stylesMobile = StyleSheet.create({
     marginTop: 10,
   },
   entryText: {
-    color: "white",
+    color: "#082c45",
     textAlign: "center",
     fontSize: 20,
   },

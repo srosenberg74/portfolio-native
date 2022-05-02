@@ -40,7 +40,7 @@ export default function Contact() {
         <View>
           <View style={styles.center}>
             <Text style={styles.heading}>Contact Me</Text>
-            <View>
+            <View style={styles.center}>
               <Text style={{ color: "#082c45" }}>Your Name*</Text>
               <TextInput
                 style={styles.input}

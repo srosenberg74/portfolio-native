@@ -28,7 +28,7 @@ function Entry(props) {
           <Text style={styles.entryText}>Site</Text>
         </Pressable>
         <Pressable onPress={() => Linking.openURL(props.linkToGithub)}>
-          <AntDesign name="github" size={50} color="#082c45" />
+          <AntDesign name="github" size={35} color="white" />
         </Pressable>
       </View>
     </View>

@@ -38,7 +38,7 @@ function Portfolio() {
 
   return (
     <View style={styles.layout}>
-      <Text style={styles.heading}>Portfolio</Text>
+      <Text style={styles.headingPortfolio}>Portfolio</Text>
       <View style={styles.column}>
         <View style={styles.portfolioColumn}>{generateEntries}</View>
       </View>
