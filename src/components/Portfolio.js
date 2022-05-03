@@ -33,6 +33,7 @@ function Portfolio() {
       description={item.description}
       linkToSite={item.linkToSite}
       linkToGithub={item.linkToGithub}
+      videoFile={item.videoFile}
     />
   ));
 
