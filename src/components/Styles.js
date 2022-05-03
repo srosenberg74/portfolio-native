@@ -24,13 +24,13 @@ export const stylesWeb = StyleSheet.create({
   contactContent: {
     width: 600,
     borderRadius: 8,
-
     padding: 30,
   },
   profilePic: {
     height: 450,
     width: 450,
     alignSelf: "center",
+    borderRadius: 8,
   },
   heading: {
     fontSize: 50,

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "portfolio-native",
-    "slug": "portfolio-native",
+    "name": "sam-rosenberg-portfolio",
+    "slug": "sam-rosenberg-portfolio",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
