@@ -41,7 +41,8 @@ function Portfolio() {
     <View style={styles.layout}>
       <Text style={styles.headingPortfolio}>Portfolio</Text>
       <View style={styles.column}>
-        <View style={styles.portfolioColumn}>{generateEntries}</View>
+        <View style={styles.portfolioColumn}>
+          <View style={styles.portfolioRows}>{generateEntries}</View></View>
       </View>
     </View>
   );

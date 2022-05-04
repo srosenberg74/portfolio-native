@@ -143,7 +143,7 @@ export const stylesWeb = StyleSheet.create({
     backgroundColor: "#082c45",
   },
   entry: {
-    width: "94%",
+    // width: "40%",
     padding: 20,
     borderColor: "#082c45",
     borderWidth: 1,
@@ -154,10 +154,12 @@ export const stylesWeb = StyleSheet.create({
     marginBottom: 30,
     borderColor: "silver",
     borderWidth: 4,
+    marginLeft: 20,
+    marginRight: 20,
   },
   video: {
-    height: 220,
-    width: 440,
+    height: 200,
+    aspectRatio: 16 / 9,
     borderRadius: 12,
     marginBottom: 14,
   },
@@ -186,17 +188,20 @@ export const stylesWeb = StyleSheet.create({
   portfolioColumn: {
     alignItems: "center",
   },
+  portfolioRows: {
+    flexDirection: "row",
+    justifyContent: "center",
+    // flexWrap: "wrap",
+  },
 });
 
 export const stylesMobile = StyleSheet.create({
   ProfileLayout: {
-    
     backgroundColor: "#082c45",
     padding: 40,
     paddingTop: 30,
   },
   layout: {
-   
     backgroundColor: "#082c45",
     padding: 25,
     paddingTop: 30,
@@ -206,6 +211,7 @@ export const stylesMobile = StyleSheet.create({
     width: 300,
     alignSelf: "center",
     marginBottom: 20,
+    borderRadius: 80,
   },
   heading: {
     fontSize: 35,
