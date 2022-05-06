@@ -1,4 +1,4 @@
-// import "react-native-gesture-handler";
+import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useRef } from "react";
 import { StyleSheet, Text, View, ScrollView, FlatList, useWindowDimensions } from "react-native";
