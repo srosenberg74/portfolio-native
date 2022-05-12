@@ -12,6 +12,7 @@ import {
   useWindowDimensions,
   Button,
   Pressable,
+  FlatList,
 } from "react-native";
 
 function Portfolio() {
@@ -25,24 +26,40 @@ function Portfolio() {
     styles = stylesWeb;
   }
 
-  const generateEntries = portfolioItems.map((item, index) => (
-    <Entry
-      key={index}
-      name={item.name}
-      uri={item.uri}
-      description={item.description}
-      linkToSite={item.linkToSite}
-      linkToGithub={item.linkToGithub}
-      videoFile={item.videoFile}
-    />
-  ));
+  // const generateEntries = portfolioItems.map((item, index) => (
+  //   <Entry
+  //     key={index}
+  //     name={item.name}
+  //     uri={item.uri}
+  //     description={item.description}
+  //     linkToSite={item.linkToSite}
+  //     linkToGithub={item.linkToGithub}
+  //     videoFile={item.videoFile}
+  //   />
+  // ));
 
   return (
-    <View style={styles.layout}>
+    <View style={styles.portfolioLayout}>
       <Text style={styles.headingPortfolio}>Portfolio</Text>
       <View style={styles.column}>
         <View style={styles.portfolioColumn}>
-          <View style={styles.portfolioRows}>{generateEntries}</View></View>
+          <FlatList
+            contentContainerStyle={styles.portfolioRows}
+            keyExtractor={(item) => item.id}
+            data={portfolioItems}
+            initialNumToRender={2}
+            renderItem={({ item }) => (
+              <Entry
+                name={item.name}
+                uri={item.uri}
+                description={item.description}
+                linkToSite={item.linkToSite}
+                linkToGithub={item.linkToGithub}
+                videoFile={item.videoFile}
+              />
+            )}
+          ></FlatList>
+        </View>
       </View>
     </View>
   );

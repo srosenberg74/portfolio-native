@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
-    height: 500,
+    flex: 1,
     backgroundColor: "#082c45",
     padding: 80,
     display: "flex",
@@ -17,6 +17,16 @@ export const stylesWeb = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+  },
+  portfolioLayout: {
+    minHeight: "100%",
+    backgroundColor: "#082c45",
+    padding: 40,
+    paddingTop: 70,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
   content: {
     maxWidth: 900,
@@ -125,6 +135,7 @@ export const stylesWeb = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
+    backgroundColor: "#082c45",
   },
   scrollView: {
     borderTopWidth: 2,
@@ -156,6 +167,7 @@ export const stylesWeb = StyleSheet.create({
     borderWidth: 4,
     marginLeft: 20,
     marginRight: 20,
+    maxWidth: 450,
   },
   video: {
     height: 200,
@@ -186,12 +198,19 @@ export const stylesWeb = StyleSheet.create({
     fontSize: 20,
   },
   portfolioColumn: {
+    display: "flex",
+    flex: 1,
     alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "center",
+    width: 1000,
+    alignSelf: "center",
   },
   portfolioRows: {
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "center",
-    // flexWrap: "wrap",
+    alignItems: "center",
   },
 });
 
@@ -205,6 +224,7 @@ export const stylesMobile = StyleSheet.create({
     backgroundColor: "#082c45",
     padding: 25,
     paddingTop: 30,
+    flex: 1,
   },
   profilePic: {
     height: 300,
@@ -212,6 +232,16 @@ export const stylesMobile = StyleSheet.create({
     alignSelf: "center",
     marginBottom: 20,
     borderRadius: 80,
+  },
+  portfolioLayout: {
+    minHeight: "100%",
+    backgroundColor: "#082c45",
+    padding: 40,
+    paddingTop: 70,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
   heading: {
     fontSize: 35,
@@ -242,6 +272,19 @@ export const stylesMobile = StyleSheet.create({
     fontWeight: "bold",
     paddingBottom: 8,
     color: "white",
+  },
+  entryBody: {
+    fontSize: 22,
+    color: "white",
+    paddingBottom: 10,
+    textAlign: "center",
+  },
+  entrySubheading: {
+    fontSize: 30,
+    fontWeight: "bold",
+    paddingBottom: 8,
+    color: "white",
+    textAlign: "center",
   },
   subheadingCareer: {
     fontSize: 30,
@@ -329,14 +372,21 @@ export const stylesMobile = StyleSheet.create({
     backgroundColor: "#082c45",
   },
   entry: {
-    width: "94%",
-    padding: 10,
+    // width: "40%",
+    padding: 20,
     borderColor: "#082c45",
-    borderWidth: 2,
-    borderRadius: 8,
+    borderWidth: 1,
+    borderRadius: 20,
     alignItems: "center",
+    marginBottom: 20,
     marginTop: 20,
     marginBottom: 30,
+    borderColor: "silver",
+    borderWidth: 4,
+    marginLeft: 20,
+    marginRight: 20,
+    maxWidth: 450,
+  
   },
   video: {
     height: 220,
@@ -352,7 +402,12 @@ export const stylesMobile = StyleSheet.create({
     padding: 5,
     borderRadius: 20,
     width: 60,
-    marginRight: 30,
+    marginRight: 15,
+    marginLeft: 15,
+  },
+  entryGHLink: {
+    marginRight: 15,
+    marginLeft: 15,
   },
   linkContainer: {
     display: "flex",
@@ -368,5 +423,6 @@ export const stylesMobile = StyleSheet.create({
   },
   portfolioColumn: {
     alignItems: "center",
+    marginBottom: 100,
   },
 });

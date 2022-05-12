@@ -81,7 +81,6 @@ export default function App() {
               headerTintColor: "white",
               headerStyle: {
                 backgroundColor: "#082c45",
-                color: "white",
               },
             }}
             initialRouteName="Profile"
@@ -95,6 +94,8 @@ export default function App() {
           </Drawer.Navigator>
         </NavigationContainer>
       </View>
+      
+      
     </View>
   );
 }

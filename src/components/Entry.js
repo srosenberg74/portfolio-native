@@ -35,9 +35,7 @@ function Entry(props) {
         resizeMode="contain"
         isLooping
         onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-        onLoad={() =>
-          status.isPlaying = video.current.playAsync()
-        }
+        onLoad={() => (status.isPlaying = video.current.playAsync())}
       />
       {/* <View style={styles.buttons}>
         <Button
@@ -49,8 +47,8 @@ function Entry(props) {
           }
         />
       </View> */}
-      <Text style={styles.subheading}>{props.name}</Text>
-      <Text style={styles.body}>{props.description}</Text>
+      <Text style={styles.entrySubheading}>{props.name}</Text>
+      <Text style={styles.entryBody}>{props.description}</Text>
       <View style={styles.linkContainer}>
         <Pressable
           style={styles.entryLink}
@@ -58,9 +56,11 @@ function Entry(props) {
         >
           <Text style={styles.entryText}>Site</Text>
         </Pressable>
-        <Pressable onPress={() => Linking.openURL(props.linkToGithub)}>
-          <AntDesign name="github" size={35} color="white" />
-        </Pressable>
+        {props.linkToGithub !== null && (
+          <Pressable style={styles.entryGHLink} onPress={() => Linking.openURL(props.linkToGithub)}>
+            <AntDesign name="github" size={35} color="white" />
+          </Pressable>
+        )}
       </View>
     </View>
   );
