@@ -74,6 +74,19 @@ export const stylesWeb = StyleSheet.create({
     color: "white",
     paddingRight: 5,
   },
+  entryBody: {
+    fontSize: 22,
+    color: "white",
+    paddingBottom: 18,
+    textAlign: "center",
+  },
+  entrySubheading: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "white",
+    paddingRight: 5,
+    textAlign: "center",
+  },
   subheadingCareer: {
     fontSize: 30,
     fontWeight: "bold",
@@ -183,7 +196,12 @@ export const stylesWeb = StyleSheet.create({
     padding: 5,
     borderRadius: 20,
     width: 60,
-    marginRight: 30,
+    marginRight: 15,
+    marginLeft: 15,
+  },
+  entryGHLink: {
+    marginRight: 15,
+    marginLeft: 15,
   },
   linkContainer: {
     display: "flex",
@@ -386,7 +404,6 @@ export const stylesMobile = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     maxWidth: 450,
-  
   },
   video: {
     height: 220,
