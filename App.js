@@ -8,6 +8,7 @@ import {
   ScrollView,
   FlatList,
   useWindowDimensions,
+  Platform,
 } from "react-native";
 import Profile from "./src/components/Profile";
 import Study from "./src/components/Study";
@@ -37,65 +38,64 @@ export default function App() {
   } else {
     styles = stylesWeb;
   }
-
-  // return (
-  //   <View style={styles.main}>
-  //     <View style={styles.container}>
-  //       <View style={styles.navbar}>
-  //         <Nav setCurrentPage={setCurrentPage} />
-  //       </View>
-  //       <ScrollView
-  //         style={styles.scrollView}
-  //         contentContainerStyle={styles.scrollContentContainer}
-  //         ref={scroll}
-  //       >
-  //         {currentPage === "Profile" && <Profile />}
-  //         {currentPage === "Study" && <Study />}
-  //         {currentPage === "Career" && <Career />}
-  //         {/* <Education />
-  //       <Portfolio />
-  //       <Contact /> */}
-  //         {currentPage === "Education" && <Education />}
-  //         {currentPage === "Portfolio" && <Portfolio />}
-  //         {currentPage === "Contact" && <Contact />}
-  //       </ScrollView>
-  //       <StatusBar style="auto" />
-  //     </View>
-  //   </View>
-  // );
-
-  return (
-    <View style={styles.main}>
-      <View style={styles.container}>
-        <NavigationContainer>
-          <Drawer.Navigator
-            screenOptions={{
-              drawerStyle: {
-                backgroundColor: "#082c45",
-                width: 240,
-                color: "white",
-              },
-              drawerLabelStyle: {
-                color: "white",
-              },
-              headerTintColor: "white",
-              headerStyle: {
-                backgroundColor: "#082c45",
-              },
-            }}
-            initialRouteName="Profile"
+  if (Platform.OS === "web") {
+    return (
+      <View style={styles.main}>
+        <View style={styles.container}>
+          <View style={styles.navbar}>
+            <Nav setCurrentPage={setCurrentPage} currentPage={currentPage} />
+          </View>
+          <ScrollView
+            style={styles.scrollView}
+            contentContainerStyle={styles.scrollContentContainer}
+            ref={scroll}
           >
-            <Drawer.Screen name="Profile" component={Profile} />
-            <Drawer.Screen name="Study" component={Study} />
-            <Drawer.Screen name="Career" component={Career} />
-            <Drawer.Screen name="Education" component={Education} />
-            <Drawer.Screen name="Portfolio" component={Portfolio} />
-            <Drawer.Screen name="Contact" component={Contact} />
-          </Drawer.Navigator>
-        </NavigationContainer>
+            {currentPage === "Profile" && <Profile />}
+            {currentPage === "Study" && <Study />}
+            {currentPage === "Career" && <Career />}
+            {/* <Education />
+        <Portfolio />
+        <Contact /> */}
+            {currentPage === "Education" && <Education />}
+            {currentPage === "Portfolio" && <Portfolio />}
+            {currentPage === "Contact" && <Contact />}
+          </ScrollView>
+          <StatusBar style="auto" />
+        </View>
       </View>
-      
-      
-    </View>
-  );
+    );
+  } else {
+    return (
+      <View style={styles.main}>
+        <View style={styles.container}>
+          <NavigationContainer>
+            <Drawer.Navigator
+              screenOptions={{
+                drawerStyle: {
+                  backgroundColor: "#082c45",
+                  width: 240,
+                  color: "white",
+                },
+                drawerLabelStyle: {
+                  color: "white",
+                },
+                headerTintColor: "white",
+                headerStyle: {
+                  backgroundColor: "#082c45",
+                },
+              }}
+              initialRouteName="Profile"
+            >
+              <Drawer.Screen name="Profile" component={Profile} />
+              <Drawer.Screen name="Study" component={Study} />
+              <Drawer.Screen name="Career" component={Career} />
+              <Drawer.Screen name="Education" component={Education} />
+              <Drawer.Screen name="Portfolio" component={Portfolio} />
+              <Drawer.Screen name="Contact" component={Contact} />
+            </Drawer.Navigator>
+          </NavigationContainer>
+        </View>
+      </View>
+    );
+  }
 }

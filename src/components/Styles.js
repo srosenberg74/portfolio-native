@@ -31,6 +31,15 @@ export const stylesWeb = StyleSheet.create({
   content: {
     maxWidth: 900,
   },
+  tabs: {
+    padding: 5,
+    borderWidth: 1,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 4,
+    borderColor: "white",
+    width: 124,
+    textAlign: "center",
+  },
   contactContent: {
     width: 600,
     borderRadius: 8,
@@ -134,7 +143,7 @@ export const stylesWeb = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#082c45",
     width: "100%",
-    padding: 5,
+    // padding: 5,
     justifyContent: "space-around",
     marginBottom: 0,
   },
