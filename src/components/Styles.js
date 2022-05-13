@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
 
+
 export const stylesWeb = StyleSheet.create({
   ProfileLayout: {
     flex: 1,
-    backgroundColor: "#082c45",
+    backgroundColor: "#FFA21F",
     padding: 80,
     display: "flex",
     flexDirection: "row",
@@ -11,7 +12,7 @@ export const stylesWeb = StyleSheet.create({
   },
   layout: {
     minHeight: "100%",
-    backgroundColor: "#082c45",
+    backgroundColor: "#FFA21F",
     padding: 40,
     paddingTop: 70,
     display: "flex",
@@ -20,7 +21,7 @@ export const stylesWeb = StyleSheet.create({
   },
   portfolioLayout: {
     minHeight: "100%",
-    backgroundColor: "#082c45",
+    backgroundColor: "#FFA21F",
     padding: 40,
     paddingTop: 70,
     display: "flex",
@@ -36,9 +37,11 @@ export const stylesWeb = StyleSheet.create({
     borderWidth: 1,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 4,
-    borderColor: "white",
+    borderColor: "black",
     width: 124,
     textAlign: "center",
+    backgroundColor: "#FFA21F",
+    marginTop: 20,
   },
   contactContent: {
     width: 600,
@@ -54,24 +57,25 @@ export const stylesWeb = StyleSheet.create({
   heading: {
     fontSize: 50,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     paddingBottom: 20,
+    
   },
   headingPortfolio: {
     fontSize: 50,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     paddingBottom: 20,
   },
   CareerHeading: {
     fontSize: 50,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     paddingBottom: 20,
   },
   body: {
     fontSize: 22,
-    color: "white",
+    color: "black",
     paddingBottom: 18,
   },
   column: {
@@ -80,26 +84,26 @@ export const stylesWeb = StyleSheet.create({
   subheading: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     paddingRight: 5,
   },
   entryBody: {
     fontSize: 22,
-    color: "white",
+    color: "black",
     paddingBottom: 18,
     textAlign: "center",
   },
   entrySubheading: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     paddingRight: 5,
     textAlign: "center",
   },
   subheadingCareer: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     paddingBottom: 8,
   },
   input: {
@@ -129,27 +133,27 @@ export const stylesWeb = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "#082c45",
+    backgroundColor: "white",
     width: "100%",
-    color: "white",
+    color: "black",
     padding: 10,
     maxHeight: "100%",
   },
   HeaderTitle: {
     fontSize: 25,
-    color: "white",
+    color: "black",
+    marginTop: 20,
   },
   HeaderBar: {
     flexDirection: "row",
-    backgroundColor: "#082c45",
+    backgroundColor: "white",
     width: "100%",
     // padding: 5,
     justifyContent: "space-around",
     marginBottom: 0,
   },
   headerText: {
-    color: "white",
-    fontWeight: "bold",
+    color: "black",
     alignItems: "center",
     fontSize: 18,
     padding: 8,
@@ -157,11 +161,10 @@ export const stylesWeb = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    backgroundColor: "#082c45",
+    backgroundColor: "#FFA21F",
   },
   scrollView: {
-    borderTopWidth: 2,
-    borderColor: "#082c45",
+
     height: 400,
   },
   navbar: {
@@ -173,7 +176,7 @@ export const stylesWeb = StyleSheet.create({
   },
   main: {
     flex: 1,
-    backgroundColor: "#082c45",
+    backgroundColor: "#FFA21F",
   },
   entry: {
     // width: "40%",

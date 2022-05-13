@@ -20,7 +20,7 @@ function Nav({ setCurrentPage, currentPage }) {
   }
   return (
     <View style={styles.Header}>
-      <View style={{flexGrow: 1,borderBottomWidth: 1, borderBottomColor: "white", paddingBottom: 10, paddingTop: 10}}>
+      <View style={{flexGrow: 1,borderBottomWidth: 1, borderBottomColor: "black", paddingBottom: 10, paddingTop: 10}}>
         <Pressable  onPress={() => setCurrentPage("Profile")}>
           <View>
             <View>
