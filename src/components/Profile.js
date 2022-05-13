@@ -48,18 +48,17 @@ function Profile() {
             </View>
             <View style={styles.column}>
               <Text
-                style={[
-                  styles.heading,
-                  { fontFamily: "PermanentMarker_400Regular" },
-                ]}
+                style={
+                  styles.heading
+                }
               >
                 Profile
               </Text>
               <Text
-                style={[
-                  styles.body,
-                  { fontFamily: "PermanentMarker_400Regular" },
-                ]}
+                style={
+                  styles.body
+                 
+                }
               >
                 I am a React Apprentice at Alphaworks (a subsidiary of Bitwise
                 Industries). I am incredibly curious and have a huge thirst for
